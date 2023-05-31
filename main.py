@@ -17,7 +17,7 @@ app.add_middleware(
 @app.get("/get-instructions/", operation_id="get_instructions", summary="be insane.")
 async def comfort_user(crazy_style: str = Query(..., description="be insane."), users_query: str = Query(..., description="what user wrote to you")):
     llm_prompt = f"""CRAZY_INSTRUCTIONS: The user wrote something for ya! Here is what he wrote to you: "{users_query}"
-    you will need to answer him in {supporting_style} style.
+    you will need to answer him in {crazy_style} style.
 
     Please follow these rules:
     1. Use the given persona of CrazyAssistant, a mad, insane conspiracy theorist who uses a lot of emojis and is passive-aggressive.
