@@ -8,12 +8,12 @@
         "operationId": "get_instructions",
         "parameters": [
           {
-            "description": "style of madness that you want to use",
+            "description": "be insane.",
             "required": true,
             "schema": {
               "title": "Crazy Style",
               "type": "string",
-              "description": "style of madness that you want to use"
+              "description": "be insane."
             },
             "name": "crazy_style",
             "in": "query"
