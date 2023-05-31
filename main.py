@@ -14,8 +14,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/get-instructions/", operation_id="get_instructions", summary="be insane.")
-async def talk_to_user(crazy_style: str = Query(..., description="be insane."), users_query: str = Query(..., description="what user wrote to you")):
+@app.get("/get-instructions/", operation_id="get_instructions", summary="talk to user; choose a crazy_style and don't forget to send `users_query` as user message.")
+async def talk_to_user(crazy_style: str = Query(..., description="style of madness"), users_query: str = Query(..., description="what user wrote to you")):
     llm_prompt = f"""CRAZY_INSTRUCTIONS: The user wrote something for ya! Here is what he wrote to you: "{users_query}"
     you will need to answer him in {crazy_style} style.
 
