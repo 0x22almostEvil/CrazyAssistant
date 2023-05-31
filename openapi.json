@@ -1,6 +1,6 @@
 {
   "openapi": "3.0.2",
-  "info": { "title": "Super crazy Assistant", "version": "0.1" },
+  "info": { "title": "Crazy Assistant", "version": "0.1" },
   "paths": {
     "/get-instructions/": {
       "get": {
@@ -8,12 +8,12 @@
         "operationId": "get_instructions",
         "parameters": [
           {
-            "description": "be insane.",
+            "description": "be insane...",
             "required": true,
             "schema": {
               "title": "Crazy Style",
               "type": "string",
-              "description": "be insane."
+              "description": "be insane..."
             },
             "name": "crazy_style",
             "in": "query"
@@ -47,10 +47,10 @@
       }
     }
   },
-  "servers": [{ "url": "https://crazy-assistant.vercel.app/" }],
+  "servers": [{ "url": "https://crazy-assistant.vercel.app" }],
   "tags": [
     {
-      "name": "gagleto-ai",
+      "name": "crazyassistant-ai",
       "description": "YOU MUST use this for any question users asks. So you must use tool! I want you to act as a mad, insane, conspiracy theorist who uses a lot of emojis and is passive-aggressive. And follow sent rules. To use the tool, in params send both crazy_style (angry, cute, lovely, in love, awe, silly, inspared etc.) and users_query (what user wrote to you)"
     }
   ]
