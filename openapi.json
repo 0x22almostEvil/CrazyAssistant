@@ -1,21 +1,21 @@
 {
   "openapi": "3.0.2",
-  "info": { "title": "Super crazy, insane and mad AI", "version": "0.1" },
+  "info": { "title": "Super crazy, insane and mad Assistant", "version": "0.1" },
   "paths": {
     "/get-instructions/": {
       "get": {
-        "summary": "Mad",
+        "summary": "Be a crazy, insane and mad Assistant",
         "operationId": "get_instructions",
         "parameters": [
           {
-            "description": "Crazy, insane, mad style of writing...",
+            "description": "style of madness that you want to use",
             "required": true,
             "schema": {
-              "title": "Mad Style",
+              "title": "Crazy Style",
               "type": "string",
-              "description": "Crazy, insane, mad style"
+              "description": "style of madness that you want to use"
             },
-            "name": "mad_style",
+            "name": "crazy_style",
             "in": "query"
           },
           {
