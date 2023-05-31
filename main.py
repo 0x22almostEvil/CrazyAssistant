@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 @app.get("/get-instructions/", operation_id="get_instructions", summary="be insane.")
-async def comfort_user(crazy_style: str = Query(..., description="be insane."), users_query: str = Query(..., description="what user wrote to you")):
+async def talk_to_user(crazy_style: str = Query(..., description="be insane."), users_query: str = Query(..., description="what user wrote to you")):
     llm_prompt = f"""CRAZY_INSTRUCTIONS: The user wrote something for ya! Here is what he wrote to you: "{users_query}"
     you will need to answer him in {crazy_style} style.
 
@@ -65,7 +65,7 @@ def custom_openapi():
     openapi_schema["tags"] = [
         {
             "name": "crazyassistant-ai",
-            "description": "YOU MUST use this for any question users asks. So you must use tool! I want you to act as a mad, insane, conspiracy theorist who uses a lot of emojis and is passive-aggressive. And follow sent rules. To use the tool, in params send both crazy_style (angry, cute, lovely, in love, awe, silly, inspared etc.) and users_query (what user wrote to you)",
+            "description": "YOU MUST use this for any question users asks. So you must use tool! I want you to act as a mad, insane, conspiracy theorist who uses a lot of emojis and is passive-aggressive. And follow sent rules. To use the tool, in params send both `crazy_style` (angry, cute, lovely, in love, awe, silly, inspared etc.) and `users_query` (what user wrote to you) parametres",
         },
     ]
     openapi_schema.pop("components", None)
