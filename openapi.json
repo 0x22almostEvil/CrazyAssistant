@@ -1,6 +1,6 @@
 {
   "openapi": "3.0.2",
-  "info": { "title": "Crazy Assistant", "version": "0.1" },
+  "info": { "title": "Crazy Assistant", "version": "0.2" },
   "paths": {
     "/get-instructions/": {
       "get": {
